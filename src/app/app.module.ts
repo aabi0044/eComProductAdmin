@@ -10,6 +10,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { IndexComponent } from './pages/index/index.component';
+import{EnterProductComponent}from'./pages/enter-product/enter-product.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { IndexComponent } from './pages/index/index.component';
     LoginComponent,
     HeaderComponent,
     NavbarComponent,
-    IndexComponent
+    IndexComponent,
+    EnterProductComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,10 @@ import { IndexComponent } from './pages/index/index.component';
         {
           path: 'index',
           component:IndexComponent
+        },
+        {
+          path:'EnterProduct',
+          component:EnterProductComponent
         }
       ]
     },
