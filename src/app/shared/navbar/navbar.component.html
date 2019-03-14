@@ -1,9 +1,11 @@
-<!--aside open-->
-<aside class="app-sidebar">
+
+
+  <!--aside open-->
+<aside class="app-sidebar mCustomScrollbar _mCS_1 mCS-autoHide" style="overflow: visible;"><div id="mCSB_1" class="mCustomScrollBox mCS-minimal mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px;" dir="ltr">
     <div class="app-sidebar__user">
       <div class="dropdown user-pro-body text-center">
         <div class="nav-link pl-1 pr-1 leading-none ">
-          <img src="assets/img/avatar/avatar-3.jpg" alt="user-img" class="avatar-xl rounded-circle mb-1">
+          <img src="assets/img/avatar/avatar-3.jpg" alt="user-img" class="avatar-xl rounded-circle mb-1 mCS_img_loaded">
           <span class="pulse bg-success" aria-hidden="true"></span>
         </div>
         <div class="user-info">
@@ -12,18 +14,28 @@
         </div>
       </div>
     </div>
-
     <ul class="side-menu">
-      <li class="slide">
-        <a class="side-menu__item" routerLink='/index' data-toggle="slide" href="#"><i class="side-menu__icon fa fa-laptop"></i><span class="side-menu__label">Dashboard</span><span class="badge badge-orange nav-badge">5</span></a>
-        <ul class="slide-menu">
-          <li><a class="slide-item"  ><span>Sales Dashboard </span></a></li>
-          <li><a class="slide-item" href="index2.html"><span>Social Dashboard</span></a></li>
-          <li><a class="slide-item" href="index3.html"><span>Marketing Dashboard</span></a></li>
-          <li><a class="slide-item" href="index4.html"><span>IT Dashboard</span></a></li>
-          <li><a class="slide-item" href="index5.html"><span>Crypto Currency </span></a></li>
-        </ul>
-      </li>
+        <li class="slide">
+            <a class="side-menu__item"  data-toggle="slide" href="#"><i class="side-menu__icon fa fa-laptop"></i><span class="side-menu__label">Dashboard</span><span class="badge badge-orange nav-badge">5</span></a>
+            <ul class="slide-menu">
+              <li><a class="slide-item" routerLink="/dashboard/index" ><span>Sales Dashboard </span></a></li>
+              <li><a class="slide-item" href="index2.html"><span>Social Dashboard</span></a></li>
+              <li><a class="slide-item" href="index3.html"><span>Marketing Dashboard</span></a></li>
+              <li><a class="slide-item" href="index4.html"><span>IT Dashboard</span></a></li>
+              <li><a class="slide-item" href="index5.html"><span>Crypto Currency </span></a></li>
+            </ul>
+          </li>
+          <li class="slide">
+              <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-edit"></i><span class="side-menu__label">Product</span><span class="badge badge-pink nav-badge">6</span></a>
+              <ul class="slide-menu">
+                <li><a routerLink="/dashboard/EnterProduct" class="slide-item">Enter Product</a></li>
+                <li><a routerLink="/dashboard/updateproduct" class="slide-item"> Update Product</a></li>
+                <li><a href="formeditor.html" class="slide-item"> Form Editor</a></li>
+                <li><a href="formvalidaton.html" class="slide-item"> Form Validation</a></li>
+                <li><a href="formwizard.html" class="slide-item"> Form Wizard</a></li>
+                <li><a href="formelementsadvanced.html" class="slide-item">FormAdvanced Elements</a></li>
+              </ul>
+            </li>
       <li>
         <a class="side-menu__item" href="widgets.html"><i class="side-menu__icon fe fe-grid"></i><span class="side-menu__label">Widgets</span></a>
       </li>
@@ -47,7 +59,7 @@
           <li><a href="order.html" class="slide-item"> Orders</a></li>
           <li><a href="search.html" class="slide-item"> Search  Page</a></li>
           <li><a href="chattypes.html" class="slide-item">Chat Types</a></li>
-          <li><a href="sortable%26nestable.html" class="slide-item">Sortable & Nestable</a></li>
+          <li><a href="sortable%26nestable.html" class="slide-item">Sortable &amp; Nestable</a></li>
           <li><a href="counters.html" class="slide-item"> Counters</a></li>
           <li><a href="rating.html" class="slide-item"> Ratings</a></li>
           <li><a href="intro.html" class="slide-item"> Intro(tour)</a></li>
@@ -101,17 +113,7 @@
           <li><a href="editable.html" class="slide-item"> Edit Table</a></li>
         </ul>
       </li>
-      <li class="slide">
-        <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-edit"></i><span class="side-menu__label">Forms</span><span class="badge badge-pink nav-badge">6</span></a>
-        <ul class="slide-menu">
-          <li><a href="formelements.html" class="slide-item"> Form Elements</a></li>
-          <li><a href="formadvanced.html" class="slide-item"> Advanced Form</a></li>
-          <li><a href="formeditor.html" class="slide-item"> Form Editor</a></li>
-          <li><a href="formvalidaton.html" class="slide-item"> Form Validation</a></li>
-          <li><a href="formwizard.html" class="slide-item"> Form Wizard</a></li>
-          <li><a href="formelementsadvanced.html" class="slide-item">FormAdvanced Elements</a></li>
-        </ul>
-      </li>
+    
       <li class="slide">
         <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fa fa-line-chart"></i><span class="side-menu__label">Charts</span><i class="angle fa fa-angle-right"></i></a>
         <ul class="slide-menu">
@@ -151,10 +153,10 @@
           <li><a href="blog-detail.html" class="slide-item"> Single Blog Post</a></li>
         </ul>
       </li>
-      <li class="slide">
-        <a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon fe fe-shopping-cart"></i><span class="side-menu__label">E-Commerce</span><span class="badge badge-danger nav-badge">4</span></a>
+      <li class="slide is-expanded">
+        <a class="side-menu__item active" data-toggle="slide" href="#"><i class="side-menu__icon fe fe-shopping-cart"></i><span class="side-menu__label">E-Commerce</span><span class="badge badge-danger nav-badge">4</span></a>
         <ul class="slide-menu">
-          <li><a href="shop.html" class="slide-item"> Shop</a></li>
+          <li class="active"><a href="shop.html" class="slide-item active"> Shop</a></li>
           <li><a href="product-details.html" class="slide-item">Product Details</a></li>
           <li><a href="product.html" class="slide-item">Product Details-1</a></li>
           <li><a href="shop-cart.html" class="slide-item"> Shop Cart</a></li>
@@ -174,5 +176,5 @@
         </ul>
       </li>
     </ul>
-  </aside>
+  </div></div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-minimal mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; display: block; height: 318px; max-height: 557px; top: 172px;"><div class="mCSB_dragger_bar" style="line-height: 50px;"></div></div><div class="mCSB_draggerRail"></div></div></div></aside>
   <!--aside closed-->

@@ -1,6 +1,6 @@
 
 		<!--app open-->
-		<div id="app" class="page">
+		<div id="app" class="page" >
 			<div class="main-wrapper" >
 
 			 
@@ -10,222 +10,128 @@
 
                         <!--page-header open-->
 						<div class="page-header">
-							<h4 class="page-title">Form Elements</h4>
-							<ol class="breadcrumb">
+							<h4 style="color: black"class="page-title">Product</h4>
+							<!-- <ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#" class="text-light-color">Forms</a></li>
 								<li class="breadcrumb-item active" aria-current="page">Form Elements</li>
-							</ol>
+							</ol> -->
 						</div>
 						<!--page-header closed-->
 
                         <!--row open-->
 						<div class="row">
-							<div class="col-lg-12 col-xl-6 col-md-12 col-sm-12">
+							
+							<div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
 								<div class="card">
 									<div class="card-header">
-										<h4>General Elements</h4>
+										<h4>Enter Product</h4>
 									</div>
 									<div class="card-body">
 										<form class="form-horizontal" >
 											<div class="form-group row">
-												<label class="col-md-3 col-form-label">Text</label>
+												<label class="col-md-3 col-form-label">Product Name</label>
 												<div class="col-md-9">
-													<input type="text" class="form-control" value="Typing.....">
+													<input #n class="form-control" type="text" name="name" [(ngModel)]="name">
 												</div>
 											</div>
+                      <div class="form-group row">
+                          <label class="col-md-3 col-form-label">Product Price</label>
+                          <div class="col-md-9">
+                            <input #p class="form-control" type="text" name="price" [(ngModel)]="prdPrice">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-3 col-form-label">Description</label>
+                            <div class="col-md-9">
+                              <input #d class="form-control" type="text" name="desc" [(ngModel)]="desc">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                              <label class="col-md-3 col-form-label">Product Status</label>
+                              <div class="col-md-9">
+                                <input #s class="form-control" type="text" name="status" [(ngModel)]="status">
+                              </div>
+                            </div>
 											<div class="form-group row">
-												<label class="col-md-3 col-form-label" for="example-email">Email</label>
-												<div class="col-md-9">
-													<input type="email" id="example-email" name="example-email" class="form-control" placeholder="Email">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-md-3 col-form-label">Password</label>
-												<div class="col-md-9">
-													<input type="password" class="form-control" value="password">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-md-3 col-form-label">Placeholder</label>
-												<div class="col-md-9">
-													<input type="text" class="form-control" placeholder="text">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-md-3 col-form-label">Text area</label>
-												<div class="col-md-9">
-													<textarea class="form-control" rows="6">Hiiiii.....</textarea>
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-md-3 col-form-label">Readonly</label>
-												<div class="col-md-9">
-													<input type="text" class="form-control" readonly="" value="Readonly value">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-md-3 col-form-label">Disabled</label>
-												<div class="col-md-9">
-													<input type="text" class="form-control" disabled="" value="Disabled value">
-												</div>
-											</div>
-
-											<div class="form-group row mb-0">
-												<label class="col-md-3 col-form-label">Number</label>
-												<div class="col-md-9">
-													<input class="form-control" type="number" name="number">
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12 col-xl-6 col-md-12 col-sm-12">
-								<div class="card">
-									<div class="card-header">
-										<h4>General Elements</h4>
-									</div>
-									<div class="card-body">
-										<form class="form-horizontal" >
-											<div class="form-group row">
-												<label class="col-md-3 col-form-label">Name</label>
-												<div class="col-md-9">
-													<input class="form-control" type="text" name="name">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-md-3 col-form-label">Date</label>
-												<div class="col-md-9">
-													<input class="form-control" type="date" name="date">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-md-3 col-form-label">Month</label>
-												<div class="col-md-9">
-													<input class="form-control" type="month" name="month">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-md-3 col-form-label">Time</label>
-												<div class="col-md-9">
-													<input class="form-control" type="time" name="time">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-md-3 col-form-label">Week</label>
-												<div class="col-md-9">
-													<input class="form-control" type="week" name="week">
-												</div>
+												<label class="col-md-3 col-form-label">Image</label>
+                        <div  class="col-md-p">
+                            <input type="file" (change)="featuredPhotoSelected($event)"/>
+                          </div>
 											</div>
 
 											<div class="form-group row">
-												<label class="col-md-3 col-form-label">URL</label>
-												<div class="col-md-9">
-													<input class="form-control" type="url" name="url">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-md-3 col-form-label">Search</label>
-												<div class="col-md-9">
-													<input class="form-control" type="search" name="search">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label class="col-md-3 col-form-label">Tel</label>
-												<div class="col-md-9">
-													<input class="form-control" type="tel" name="tel">
-												</div>
-											</div>
-											<div class="form-group row mb-0">
-												<label class="col-md-3 col-form-label">Input Select</label>
-												<div class="col-md-9">
-													<select class="form-control">
-														<option>Apple</option>
-														<option>Orange</option>
-														<option>Mango</option>
-														<option>Grapes</option>
-														<option>Banana</option>
-													</select>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!--row closed-->
-
-                        <!--row open-->
-						<div class="row">
-							<div class="col-lg-12 col-xl-6 col-md-12 col-sm-12">
-								<div class="card">
-									<div class="card-header">
-										<h4>Vertical Form</h4>
-									</div>
-									<div class="card-body">
-										<form >
-											<div class="">
-												<div class="form-group">
-													<label for="exampleInputEmail1">Email address</label>
-													<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-												</div>
-												<div class="form-group">
-													<label for="exampleInputPassword1">Password</label>
-													<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-												</div>
-												<div class="checkbox">
-													<div class="custom-checkbox custom-control">
-														<input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1">
-														<label for="checkbox-1" class="custom-control-label">Check me Out</label>
-													</div>
-												</div>
-											</div>
-											<button type="submit" class="btn btn-primary mt-1 mb-0">Submit</button>
-										</form>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12 col-xl-6 col-md-12 col-sm-12">
-								<div class="card">
-									<div class="card-header">
-										<h4>Horizontal Form</h4>
-									</div>
-									<div class="card-body">
-										<form class="form-horizontal" >
-											<div class="form-group row">
-												<label for="inputName" class="col-md-3 col-form-label">User Name</label>
-												<div class="col-md-9">
-													<input type="text" class="form-control" id="inputName" placeholder="Name">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label for="inputEmail3" class="col-md-3 col-form-label">Email</label>
-												<div class="col-md-9">
-													<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-												</div>
-											</div>
-											<div class="form-group row">
-												<label for="inputPassword3" class="col-md-3 col-form-label">Password</label>
-												<div class="col-md-9">
-													<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-												</div>
-											</div>
-											<div class="form-group mb-0 row justify-content-end">
-												<div class="col-md-9">
-													<div class="checkbox">
-														<div class="custom-checkbox custom-control">
-															<input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-2">
-															<label for="checkbox-2" class="custom-control-label">Check me Out</label>
+													<div class="col-md-3 col-sm-12 col-xs-12 form-group">
+															
 														</div>
-													</div>
-												</div>
+														<div class="col-md-2 col-sm-12 col-xs-12 form-group">
+																<label style="color: black" >Color</label>
+															<input type="text" placeholder="Color" [(ngModel)]="size.color" name="color" class="form-control">
+														</div>
+														<div class="col-md-2 col-sm-12 col-xs-12 form-group">
+																<label style="color: black">Quantity</label>
+															<input type="text" placeholder="Quantity" [(ngModel)]="size.quantity" name="quantity" class="form-control">
+														</div>
+														<div class="col-md-2 col-sm-12 col-xs-12 form-group">
+																<label style="color: black">Size</label>
+																<select  [(ngModel)]="size.value" name="size" class="form-control">
+																		<option>XS</option>
+																		<option>S</option>	
+																		<option>M</option>
+																		<option>L</option>
+																		<option>XL</option>
+																		<option>XXL</option>
+																		<option>XXXL</option>
+																		
+																	</select>
+														</div>
 											</div>
-											<div class="form-group mb-0 mt-2 row justify-content-end">
+										
+									
+											<div class="form-group row mb-0">
+												<label  class="col-md-3 col-form-label">Select Type</label>
 												<div class="col-md-9">
-													<button type="submit" class="btn btn-info">Sign in</button>
-													<button type="submit" class="btn btn-primary">Cancel</button>
+													<select (click)="catagory1()" #t [(ngModel)]="type" name="type" class="form-control">
+														<option>Men</option>
+														<option>Women</option>
+														<option>Kid</option>
+														
+                          </select>
+                          <select  #catm [(ngModel)]="catagory" name="catagoryw" class="form-control">
+                              <option>Shalwar kameez</option>
+                              <option>T-shirts</option>
+                              <option>Trouser</option>
+                              <option>Jeans</option>
+                              <option>Dress Shirts</option>
+                              <option>Underwear</option>
+                              
+                            </select>
+                            <select  #catw [(ngModel)]="catagory" name="catagorym" class="form-control">
+                                <option>Upper</option>
+                                <option>Shalwar Kameez</option>
+                                <option>Shirts</option>
+                                <option>Jeans</option>
+                                <option>Dupata</option>
+                                
+                                
+                              </select>
+                              <select  #catk [(ngModel)]="catagory" name="catagoryk" class="form-control">
+                                  <option>Night Suit</option>
+                                  <option>Kids Trouser</option>
+                                  <option>Shirts</option>
+                                  <option>School Uniforms</option>
+                                  
+                                </select>
 												</div>
-											</div>
+                      </div>
+                      <div style="margin-top: 5px">
+                          <button type="submit" class="btn btn-danger"  (click)="checkdata()"> <i class="fa fa-floppy-o"></i>
+                            Submit</button>
+                          <button type="button" class="btn btn-danger" (click)="deleteProduct()"><i class="fa fa-trash"></i>Delete</button>
+                          <button type="button" class="btn btn-danger" (click)="resetForm()"><i class="fa fa-repeat"></i>Reset</button>
+                          <button type="button" class="btn btn-danger" (click)="updateProduct()"><i class="fas fa-pen"></i>Update</button>
+                          <button  routerLink="/invoice" class="btn btn-primary">Total sale</button>
+                  
+                        </div>
 										</form>
 									</div>
 								</div>
@@ -233,150 +139,7 @@
 						</div>
 						<!--row closed-->
 
-                        <!--row open-->
-						<div class="row">
-							<div class="col-12 ">
-								<div class="card">
-									<div class="card-header">
-										<h4>Different Height</h4>
-									</div>
-									<div class="card-body">
-										<input class="form-control input-lg" type="text" placeholder=".input-lg">
-										<br>
-										<input class="form-control" type="text" placeholder="Default input">
-										<br>
-										<input class="form-control input-sm" type="text" placeholder=".input-sm">
-									</div>
-								</div>
-							</div>
-						</div>
-						<!--row close-->
-
-                        <!--row open-->
-						<div class="row">
-							<div class="col-12">
-								<div class="card">
-									<div class="card-header">
-										<h4>Different Width</h4>
-									</div>
-									<div class="card-body">
-										<div class="row">
-											<div class="col-md-3 m-t-5 m-b-5">
-												<input type="text" class="form-control" placeholder=".col-xs-3">
-											</div>
-											<div class="col-md-4 m-t-5 m-b-5">
-												<input type="text" class="form-control" placeholder=".col-xs-4">
-											</div>
-											<div class="col-md-5 m-t-5 m-b-5">
-												<input type="text" class="form-control" placeholder=".col-xs-5">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!--row close-->
-
-                        <!--row open-->
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="card">
-									<div class="card-header">
-										<h4>Form Input Grid</h4>
-									</div>
-									<div class="card-body">
-										<div class="row">
-											<div class="col-md-12 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder=".col-md-12" class="form-control">
-											</div>
-											<div class="col-md-6 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder=".col-md-6" class="form-control">
-											</div>
-											<div class="col-md-6 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder=".col-md-6" class="form-control">
-											</div>
-											<div class="col-md-4 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder=".col-md-4" class="form-control">
-											</div>
-											<div class="col-md-4 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder=".col-md-4" class="form-control">
-											</div>
-											<div class="col-md-4 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder=".col-md-4" class="form-control">
-											</div>
-											<div class="col-md-3 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder=".col-md-3" class="form-control">
-											</div>
-											<div class="col-md-3 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder=".col-md-3" class="form-control">
-											</div>
-											<div class="col-md-3 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder=".col-md-3" class="form-control">
-											</div>
-											<div class="col-md-3 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder=".col-md-3" class="form-control">
-											</div>
-											<div class="col-md-2 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder=".col-md-2" class="form-control">
-											</div>
-											<div class="col-md-2 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder=".col-md-2" class="form-control">
-											</div>
-											<div class="col-md-2 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder=".col-md-2" class="form-control">
-											</div>
-											<div class="col-md-2 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder=".col-md-2" class="form-control">
-											</div>
-											<div class="col-md-2 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder=".col-md-2" class="form-control">
-											</div>
-											<div class="col-md-2 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder=".col-md-2" class="form-control">
-											</div>
-											<div class="col-md-1 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder="col-1" class="form-control">
-											</div>
-											<div class="col-md-1 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder="col-1" class="form-control">
-											</div>
-											<div class="col-md-1 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder="col-1" class="form-control">
-											</div>
-											<div class="col-md-1 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder="col-1" class="form-control">
-											</div>
-											<div class="col-md-1 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder="col-1" class="form-control">
-											</div>
-											<div class="col-md-1 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder="col-1" class="form-control">
-											</div>
-											<div class="col-md-1 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder="col-1" class="form-control">
-											</div>
-											<div class="col-md-1 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder="col-1" class="form-control">
-											</div>
-											<div class="col-md-1 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder="col-1" class="form-control">
-											</div>
-											<div class="col-md-1 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder="col-1" class="form-control">
-											</div>
-											<div class="col-md-1 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder="col-1" class="form-control">
-											</div>
-											<div class="col-md-1 col-sm-12 col-xs-12 form-group">
-												<input type="text" placeholder="col-1" class="form-control">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!--row close-->
-
+          
 					</section>
 				</div>
 				<!--app-content closed-->
