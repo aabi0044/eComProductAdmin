@@ -18,6 +18,7 @@ import { IndexComponent } from './pages/index/index.component';
 import{EnterProductComponent}from'./pages/enter-product/enter-product.component';
 import { environment } from 'src/environments/environment';
 import { UpdateproductComponent } from './pages/updateproduct/updateproduct.component';
+import { EntercatagoryComponent } from './pages/entercatagory/entercatagory.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { UpdateproductComponent } from './pages/updateproduct/updateproduct.comp
     NavbarComponent,
     IndexComponent,
     EnterProductComponent,
-    UpdateproductComponent
+    UpdateproductComponent,
+    EntercatagoryComponent
   ],
   imports: [
     BrowserModule,  
@@ -60,6 +62,10 @@ import { UpdateproductComponent } from './pages/updateproduct/updateproduct.comp
         {
           path:'updateproduct',
           component:UpdateproductComponent
+        },
+        {
+          path:'entercatagory',
+          component:EntercatagoryComponent
         }
       ]
     },

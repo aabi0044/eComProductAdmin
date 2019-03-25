@@ -90,45 +90,61 @@
 											<div class="form-group row mb-0">
 												<label  class="col-md-3 col-form-label">Select Type</label>
 												<div class="col-md-9">
-													<select (click)="catagory1()" #t [(ngModel)]="type" name="type" class="form-control">
-														<option>Men</option>
-														<option>Women</option>
-														<option>Kid</option>
+													<select (click)="catagory1()" [(ngModel)]="value1"  #t name="type" class="form-control">
+														
+														<option  *ngFor="let status_item of type"  >{{status_item.name}}</option>
+														
 														
                           </select>
-                          <select  #catm [(ngModel)]="catagory" name="catagoryw" class="form-control">
-                              <option>Shalwar kameez</option>
-                              <option>T-shirts</option>
-                              <option>Trouser</option>
-                              <option>Jeans</option>
-                              <option>Dress Shirts</option>
-                              <option>Underwear</option>
+                          <select (click)="subcat()" #catm  [(ngModel)]="catagory11" name="catagory" class="form-control">
+                              <option *ngFor="let cat of catagory">{{cat.name}}</option>
+                            
                               
-                            </select>
-                            <select  #catw [(ngModel)]="catagory" name="catagorym" class="form-control">
-                                <option>Upper</option>
-                                <option>Shalwar Kameez</option>
-                                <option>Shirts</option>
-                                <option>Jeans</option>
-                                <option>Dupata</option>
-                                
-                                
-                              </select>
-                              <select  #catk [(ngModel)]="catagory" name="catagoryk" class="form-control">
-                                  <option>Night Suit</option>
-                                  <option>Kids Trouser</option>
-                                  <option>Shirts</option>
-                                  <option>School Uniforms</option>
-                                  
-                                </select>
+													</select>
+													<select  #catm1 [(ngModel)]="subcatagory11" name="SubCatagory" class="form-control">
+														<option *ngFor="let cat1 of clothing">{{cat1.name}}</option>
+													
+														
+												<!-- </select>
+												<select  #catm2 [(ngModel)]="subcatagory22" name="catagorym2" class="form-control">
+													<option *ngFor="let cat1 of clothing2">{{cat1.name}}</option>
+												
+													
+											</select>
+											<select  #catm3 [(ngModel)]="subcatagory33" name="catagorym3" class="form-control">
+												<option *ngFor="let cat1 of clothing3">{{cat1.name}}</option> -->
+											
+												
+										</select>
+														<!-- <select  #catmm [(ngModel)]="catagory" name="catagoryww" class="form-control">
+																<option value="">Formal Wear</option>
+																<option>Casual Wear</option>
+																<option>Ethnic Wear</option>
+																
+															</select> -->
+															<!-- <select  #catmmf [(ngModel)]="catagory"  name="catagorywwf" class="form-control">
+																	<option>Formal Wear</option>
+																	<option>Casual Wear</option>
+																	<option>Ethnic Wear</option>
+														</select> -->
+                            <!-- <select  #catw [(ngModel)]="catagory11" name="catagoryw" class="form-control">
+																<option *ngFor="let cat of catagory">{{cat.name}}</option>
+															
+																
+														</select>
+														<select  #catk [(ngModel)]="catagory11" name="catagoryk" class="form-control">
+																<option *ngFor="let cat of catagory">{{cat.name}}</option>
+															
+																
+														</select> -->
 												</div>
                       </div>
                       <div style="margin-top: 5px">
-                          <button type="submit" class="btn btn-danger"  (click)="checkdata()"> <i class="fa fa-floppy-o"></i>
+                          <button type="submit" *ngIf="!passid" class="btn btn-danger"  (click)="checkdata()"> <i class="fa fa-floppy-o"></i>
                             Submit</button>
                           <button type="button" class="btn btn-danger" (click)="deleteProduct()"><i class="fa fa-trash"></i>Delete</button>
                           <button type="button" class="btn btn-danger" (click)="resetForm()"><i class="fa fa-repeat"></i>Reset</button>
-                          <button type="button" class="btn btn-danger" (click)="updateProduct()"><i class="fas fa-pen"></i>Update</button>
+                          <button type="button" *ngIf="passid" class="btn btn-danger" (click)="checkforupdate()"><i class="fas fa-pen"></i>Update</button>
                           <button  routerLink="/invoice" class="btn btn-primary">Total sale</button>
                   
                         </div>
